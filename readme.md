@@ -1,1 +1,1 @@
-This is my template for layout simple page
+This is example for company site
