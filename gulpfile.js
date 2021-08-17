@@ -6,7 +6,8 @@ const path = {
 		css: distPath + '/css',
 		img: distPath + '/img',
 		favicon: distPath + '/img/favicon',
-		js: distPath + '/js'
+		js: distPath + '/js',
+		font: distPath + '/fonts'
 	},
 	src: {
 		html: [srcPath + '/*.html', '!' + srcPath + '/**/_*.html'],
@@ -14,7 +15,8 @@ const path = {
 		img: srcPath + '/img/**/*.{jpg,png,svg,gif,webp}',
 		svg: srcPath + '/svg/*.svg',
 		favicon: srcPath + '/favicon/logo.png',
-		js: srcPath + '/js/main.js'
+		js: srcPath + '/js/main.js',
+		font: srcPath + '/fonts/*.{eot,svg,ttf,woff,woff2}'
 	},
 	watch: {
 		html: srcPath + '/**/*.html',
@@ -22,7 +24,8 @@ const path = {
 		img: srcPath + '/img/**/*.{jpg,png,svg,gif,webp}',
 		svg: srcPath + '/svg/**/*.svg',
 		favicon: srcPath + '/favicon/logo.png',
-		js: srcPath + '/js/**/*.js'
+		js: srcPath + '/js/**/*.js',
+		font: srcPath + '/fonts/*.{eot,svg,ttf,woff,woff2}'
 	}
 }
 
@@ -74,8 +77,8 @@ function css() {
 	return src(path.src.css)
 		.pipe(sourceMap.init())
 		.pipe(less())
-		.pipe(webpCSS())
-		.pipe(ggcmq())
+		// .pipe(webpCSS())
+		// .pipe(ggcmq())
 		.pipe(autoprefixer({
 			overrideBrowserslist: ["cover 99.5%"]
 		}))
@@ -232,6 +235,12 @@ function js() {
 		.pipe(browserSync.stream())
 }
 
+function font() {
+	return src(path.src.font)
+		.pipe(dest(path.dist.font))
+		.pipe(browserSync.stream())
+}
+
 function startWatchAll() {
 	watch(path.watch.html, html)
 	watch(path.watch.css, css)
@@ -239,6 +248,7 @@ function startWatchAll() {
 	watch(path.watch.svg, sprite)
 	watch(path.watch.favicon, favicon)
 	watch(path.watch.js, js)
+	watch(path.src.font, font)
 }
 
 function startBrowserSync() {
@@ -250,7 +260,7 @@ function startBrowserSync() {
 	})
 }
 
-const build = series(delDist, parallel(html, css, img, sprite, favicon, js))
+const build = series(delDist, parallel(html, css, img, sprite, favicon, js, font))
 const startWatching = series(build, parallel(startBrowserSync, startWatchAll))
 
 exports.build = build

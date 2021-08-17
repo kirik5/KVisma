@@ -1,27 +1,729 @@
-.firstSection{
-    background-color: aquamarine;
-    display: flex;
+// First Screen SECTION
+.firstSection {
+    position: relative;
+    font-family: @regular;
 
-    @media(min-width: 999px){
+
+    &__header {
+        position: absolute;
+        margin-top: 7px;
+        width: 100%;
+        left: 0;
+        top: 0;
+
+        @media(min-width: @sm) {
+            padding-top: 19px;
+        }
+
+        @media(min-width: @md) {
+            padding-top: 29px;
+        }
+
+        @media(min-width: 1200px) {
+            padding-top: 44px;
+        }
+    }
+
+    &__aside {
+        display: block;
+        position: fixed;
+        width: 290px;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background-color: @mainColor1;
+        transform: translateX(-100%);
+        transition: transform 0.4s;
+
+        @media(min-width: @xl) {
+            display: none;
+        }
+
+        &_active {
+            transform: translateX(0%);
+        }
+
+        &_right {
+            left: unset;
+            right: 0;
+            transform: translateX(100%);
+        }
+
+        &_rightActive {
+            transform: translateX(0%);
+        }
+    }
+
+    &__mainSlider {
+        min-height: 497px;
+
+        @media(min-width: @xl) {
+            height: 100vh;
+        }
+
+    }
+
+    &__sliderPreview {
+        content: '';
+        top: 230px;
+        left: 0;
+
+        @media(min-width: @xl) {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            z-index: 10;
+        }
+
+
+    }
+
+    &__arrows {
+        position: absolute;
+        top: 250px;
+        left: 0;
+        width: 100%;
+        transform: translateY(-50%);
+    }
+}
+
+
+// styles for main menu
+.menu {
+    color: @mainColor1;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+    z-index: 10;
+
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1050px;
+        margin: 0 auto;
+    }
+
+    &__item {
+        display: block;
+        font-size: 15px;
+
+        &_hideOnMobile {
+            display: none;
+
+            @media(min-width: 1200px) {
+                display: block;
+            }
+        }
+
+        &_hideOnDesktop {
+            @media(min-width: 1200px) {
+                display: none;
+            }
+        }
+    }
+
+    &__logo {
+        @media(min-width: @xl) {
+            margin-top: -5px;
+        }
+    }
+
+    &__phone {
+        margin-top: -5px;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: @mainColor1;
+        display: block;
+        overflow: hidden;
+        box-sizing: border-box;
+        position: relative;
+
+        &::after {
+            content: '';
+            display: block;
+            box-sizing: border-box;
+            width: 100%;
+            height: 1px;
+            margin-top: 5px;
+            background-color: @mainColor1;
+            transform: translateX(-100%);
+            transition: transform 0.4s;
+        }
+
+        &:hover {
+
+            &::after {
+                transform: translateX(0)
+            }
+        }
+    }
+}
+
+// Open menu button
+.openMenuButton {
+    display: block;
+    background-color: transparent;
+    background-image: url(../img/open-menu-button.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    opacity: 0.7;
+    transition: 0.4s;
+    cursor: pointer;
+    width: 15px;
+    height: 13px;
+    padding: 20px;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+// styles for phone
+.phone {
+    display: none;
+
+    @media(min-width: 1200px) {
+        display: flex;
+
+        &::before {
+            content: '';
+            display: block;
+            background-image: url("../img/phone.svg");
+            background-repeat: no-repeat;
+            background-size: initial;
+            background-position-y: center;
+            width: 12px;
+            height: 17px;
+            margin-right: 7px;
+        }
+
+        &__link {
+            text-decoration: none;
+            color: @mainColor1;
+            display: block;
+        }
+
+        &__main {
+            font-family: @bold;
+        }
+    }
+
+
+}
+
+
+// styles for logo
+.logo {
+    &__img {
         display: block;
     }
 }
 
-p{
-    @media(min-width: 999px){
-        display: grid;
+// Button CONTACTS
+.openContactsBtn {
+    display: block;
+    width: 12px;
+    height: 14px;
+    background-color: transparent;
+    background-image: url(../img/phone.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    opacity: 0.7;
+    transition: opacity 0.4s;
+    padding: 20px;
+
+    &:hover {
+        opacity: 1;
+    }
+
+    @media(min-width: 1200px) {
+        display: none;
+    }
+
+    &__img {
+        height: 12px;
+        width: 14px;
+        fill: @mainColor1;
     }
 }
 
-.close-button{
-    height: 100px;
-    width: 100px;
-    background-color: red;
-    background-image: url("../img/icons/icons.svg#close-button");
+// Mobile MENU
+.mobileMenu {
+    font-family: @regular;
+    font-size: 12px;
+    padding-top: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 30px;
+    background-color: @backColor1;
+    color: @mainColor2;
+    box-sizing: border-box;
+
+    &__logo {
+        margin: 0 auto;
+    }
+
+    &__items {
+        margin-top: 20px;
+    }
+
+    &__item {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__link {
+        display: block;
+        padding: 10px 0 9px 0;
+        text-decoration: none;
+        color: @mainColor2;
+        text-align: center;
+        overflow: hidden;
+
+        &::after {
+            display: block;
+            content: '';
+            width: 100%;
+            height: 1px;
+            background-color: @actionColor;
+            margin-top: 1px;
+            transform: translateX(-100%);
+            transition: transform 0.4s;
+        }
+
+        &:hover {
+            &::after {
+                transform: translateX(0%);
+            }
+        }
+    }
+
+    &__btnClose {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
 }
 
-.three{
-    height: 200px;
-    width: 200px;
-    background-image: url(../img/modern-breakfast-bar.jpg);
+// Button CLOSE
+.buttonClose {
+    background-image: url(../img/close-button.svg);
+    height: 15px;
+    width: 15px;
+    background-color: transparent;
+    border: none;
+    opacity: 0.7;
+    transition: opacity 0.4s;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+// Visma LOGO
+.vismaLogo {
+    background-color: @actionColor;
+    width: 160px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__img {
+        display: block;
+        width: 78px;
+        height: 24px;
+    }
+}
+
+// Phones
+.phones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+
+    &__header {
+        font-family: @bold;
+        font-size: 14px;
+        padding-bottom: 5px;
+    }
+
+    &__link {
+        display: block;
+        text-decoration: none;
+        color: @mainColor2;
+        font-family: @regular;
+        font-size: 11px;
+        padding: 10px 0 0 0;
+    }
+}
+
+// Form CALL
+.call {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+
+    &__input {
+        display: block;
+        text-transform: uppercase;
+        padding: 17px;
+        margin-top: 10px;
+        border: none;
+        font-family: @medium;
+        font-size: 8px;
+        letter-spacing: 0.1em;
+        box-sizing: border-box;
+        width: 212px;
+    }
+
+    &__button {
+        border: none;
+        margin-top: 30px;
+    }
+}
+
+
+// Main SLIDER
+.mainSlider {
+
+    &__slide {
+        position: relative;
+    }
+
+    &__slideImg {
+        display: block;
+        height: 280px;
+        object-fit: cover;
+        width: 100%;
+
+        @media(min-width: @xl) {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            z-index: -1;
+            height: 280px;
+        }
+
+    }
+
+    &__slideWrapper {
+        padding: 0 15px;
+
+        @media(min-width: @xl) {
+            max-width: 1050px;
+
+            margin: 0 auto;
+            height: inherit;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+        }
+
+    }
+
+    &__slideContent {
+        display: flex;
+        margin-top: -80px;
+        flex-direction: column;
+        margin-left: 15px;
+        margin-right: 15px;
+
+        @media(min-width: @xl) {
+            align-items: top;
+            justify-content: center;
+        }
+
+
+    }
+
+    &__slideOffer {
+        margin-top: 90px;
+        padding: 0 20px;
+
+        @media(@xl) {
+            margin-top: -9px;
+            margin-left: 50px;
+            max-width: 437px;
+            line-height: 1.43;
+        }
+
+    }
+
+    &__slideTitle {
+        font-family: @medium;
+        font-size: 16px;
+        line-height: 1.43;
+        color: @mainColor2;
+
+        @media(min-width: @xl) {
+            font-size: 34px;
+        }
+    }
+
+    &__slideSubtitle {
+        font-family: @regular;
+        font-size: 10px;
+        line-height: 1.46;
+        color: @mainColor2;
+        margin-top: 15px;
+
+        @media(min-width: @xl) {
+            font-size: 15px;
+            margin-top: 25px;
+        }
+
+    }
+
+    &__slideLinkBlock {
+        margin-top: 20px;
+        display: flex;
+        justify-content: flex-start;
+    }
+}
+
+
+// Action BUTTON
+.actionButton {
+    display: block;
+    background-color: @actionColor;
+        font-family: @medium;
+        font-size: 8px;
+        padding: 12px 25px;
+        line-height: 1.46;
+        letter-spacing: 0.1em;
+        text-decoration: none;
+        color: @mainColor1;
+        text-transform: uppercase;
+
+    @media(min-width: @xl) {
+        padding: 16px 40px;
+        
+        font-size: 11px;
+        
+        
+        
+        letter-spacing: 0.1em;
+        position: relative;
+        overflow: hidden;
+    }
+
+
+
+    &:hover {
+        box-shadow: 0px 0px 2px 0px #000000;
+    }
+
+    &_small {
+        font-size: 8px;
+
+        &:after {
+            display: none;
+        }
+    }
+
+    &::after {
+        content: '';
+        height: 1px;
+        background-color: @mainColor1;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        transform: translateX(-100%);
+        transition: transform 0.4s;
+    }
+
+    &:hover {
+        &::after {
+            transform: translateX(0);
+        }
+    }
+}
+
+
+// Number Count
+.numberCount {
+    display: flex;
+    color: @mainColor1;
+
+    &__count {
+        font-family: @museo100;
+        font-size: 10px;
+        line-height: 1.43;
+
+        @media(min-width) {
+            font-size: 15px;
+            line-height: 1;
+        }
+
+    }
+
+    &__number {
+        font-family: @museo500;
+        font-size: 25px;
+        line-height: 1.43;
+
+        @media(min-width: @xl) {
+            font-size: 44px;
+            line-height: 1;
+            margin-top: -2px;
+        }
+
+    }
+}
+
+
+// styles for preview slider
+.previewMainSlider {
+
+    &__wrapper {
+        max-width: 795px;
+        margin: 0 auto;
+        padding: 0 15px 15px 15px;
+    }
+
+    &__slider {
+        max-width: 642px;
+        margin-left: 0;
+    }
+
+    &__slide {
+        opacity: 0.5;
+        transition: opacity 0.4s;
+        color: @mainColor1;
+        font-family: @regular;
+        font-size: 11px;
+        line-height: 17px;
+        overflow: hidden;
+        cursor: pointer;
+        content: '';
+        
+        &::after{
+            content: '';
+            display: block;
+            height: 2px;
+            background-color: blue;
+        }
+
+        &.swiper-slide-thumb-active .previewMainSlider__description::after {
+            transform: translateX(0);
+            transition: transform 2.5s linear;
+        }
+    }
+
+    &__number {
+        display: none;
+
+        @media(min-width: @xl){
+            margin-bottom: 8px;
+        }
+        
+    }
+
+    &__description {
+        display: none;
+
+        @media(min-width: @xl){
+            padding-right: 25px;
+
+            
+        }
+
+        &::after {
+            content: '';
+            width: 100%;
+            display: block;
+            height: 1px;
+            background-color: @mainColor1;
+            margin-top: 12px;
+            margin-bottom: 10px;
+            transform: translateX(-100%);
+        }
+    }
+}
+
+.swiper-slide-thumb-active {
+    opacity: 1;
+}
+
+// Main slider ARROWS
+.arrows {
+    z-index: 12;
+
+    &__wrapper {
+        @media(min-width: @xl) {
+            max-width: 367px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: space-between;
+
+        @media(min-width: @xl) {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            border: 1px solid white;
+            border-radius: 50%;
+        }
+
+    }
+
+    &__left,
+    &__right {
+        border: none;
+        display: block;
+        width: 5px;
+        height: 11px;
+        background-color: transparent;
+        padding: 20px;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        @media(min-width: @xl) {
+            box-sizing: border-box;
+            height: 48px;
+            width: 24px;
+            background-color: transparent;
+            border: none;
+            color: @mainColor1;
+        }
+
+    }
+
+    &__left {
+        background-image: url(../img/arrow-left.svg);
+    }
+
+    &__right {
+        background-image: url(../img/arrow-right.svg);
+    }
+
+    &__svg {
+        fill: @mainColor1;
+        width: 14px;
+        height: 14px;
+        display: block;
+    }
+}
+
+.swiper-button-disabled {
+    opacity: 0;
 }

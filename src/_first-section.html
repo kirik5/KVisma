@@ -1,8 +1,373 @@
+<!--First section START-->
 <section class="firstSection">
-    <div class="wrapper">
-        <div class="one">
-            <img src="img/modern-breakfast-bar.jpg" class="two"/>
+
+    <!--Header START-->
+    <div class="menu firstSection__header">
+        <nav>
+            <ul class="menu__items">
+                <li class="menu__item menu__item_hideOnDesktop">
+                    <button class="openMenuButton"></button>
+                </li>
+                <li class="logo menu__item menu__logo">
+                    <a href="#" class="logo__link">
+                        <img src="img/logo.svg" alt="visma" class="logo__img">
+                    </a>
+                </li>
+                <li class="phone menu__item menu__phone">
+                    <a href="" class="phone__link">+38 <span class="phone__main">099 783 77 51</span></a>
+                </li>
+                <li class="menu__item menu__item_hideOnMobile">
+                    <a href="#" class="menu__link">О компании</a>
+                </li>
+                <li class="menu__item menu__item_hideOnMobile">
+                    <a href="#" class="menu__link">Продукция</a>
+                </li>
+                <li class="menu__item menu__item_hideOnMobile">
+                    <a href="#" class="menu__link">Портфолио</a>
+                </li>
+                <li class="menu__item menu__item_hideOnMobile">
+                    <a href="#" class="menu__link">Производство и команда</a>
+                </li>
+                <li class="menu__item menu__item_hideOnMobile">
+                    <a href="#" class="menu__link">Салон</a></li>
+                <li class="menu__item menu__item_hideOnMobile">
+                    <a href="#" class="menu__link">Контакты</a>
+                </li>
+                <li class="menu__item">
+                    <button class="openContactsBtn">
+                    </button>
+                </li>
+            </ul>
+            <!--Mobile MENU start-->
+            <aside class="mobileMenu firstSection__aside mobMenu">
+                <div class="vismaLogo mobileMenu__logo">
+                    <img src="img/logo.svg" alt="" class="vismaLogo__img">
+                </div>
+                <ul class="mobileMenu__items">
+                    <li class="mobileMenu__item">
+                        <a href="#" class="mobileMenu__link">О компании</a>
+                    </li>
+                    <li class="mobileMenu__item">
+                        <a href="#" class="mobileMenu__link">Блог</a>
+                    </li>
+                    <li class="mobileMenu__item">
+                        <a href="#" class="mobileMenu__link">Доставка</a>
+                    </li>
+                    <li class="mobileMenu__item">
+                        <a href="#" class="mobileMenu__link">Оплата</a>
+                    </li>
+                    <li class="mobileMenu__item">
+                        <a href="#" class="mobileMenu__link">Гарантия</a>
+                    </li>
+                    <li class="mobileMenu__item">
+                        <a href="#" class="mobileMenu__link">Карта сайта</a>
+                    </li>
+                    <li class="mobileMenu__item">
+                        <a href="#" class="mobileMenu__link">Продукция</a>
+                    </li>
+                    <li class="mobileMenu__item">
+                        <a href="#" class="mobileMenu__link">Портфолио</a>
+                    </li>
+                    <li class="mobileMenu__item">
+                        <a href="#" class="mobileMenu__link">Производство и команда</a>
+                    </li>
+                    <li class="mobileMenu__item">
+                        <a href="#" class="mobileMenu__link">Салон</a>
+                    </li>
+                </ul>
+                <button class="buttonClose mobileMenu__btnClose closeMenuBtn"></button>
+            </aside>
+            <!--Mobile MENU end-->
+            <!--Mobile CONTACTS start-->
+            <aside class="mobileMenu contactsMenu firstSection__aside firstSection__aside_right">
+                <div class="vismaLogo mobileMenu__logo">
+                    <img src="img/logo.svg" alt="" class="vismaLogo__img">
+                </div>
+                <div class="phones mobileMenu__phones">
+                    <h3 class="phones__header">Горячая линия:</h3>
+                    <ul class="phones__items">
+                        <li class="phones__item">
+                            <a href="#" class="phones__link">+38 063 517 20 03</a>
+                        </li>
+                        <li class="phones__item">
+                            <a href="#" class="phones__link">+38 063 517 20 03</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="phones mobileMenu__phones">
+                    <h3 class="phones__header">Viber/Whatsapp:</h3>
+                    <ul class="phones__items">
+                        <li class="phones__item">
+                            <a href="#" class="phones__link">+38 063 517 20 03</a>
+                        </li>
+                    </ul>
+                </div>
+                <form action="" class="call mobileMenu__form">
+                    <input type="text" class="call__input" placeholder="ваше имя">
+                    <input type="text" class="call__input" placeholder="ваш телефон">
+                    <button type="submit" class="actionButton actionButton_small call__button">Заказать звонок</button>
+                </form>
+                <button class="buttonClose mobileMenu__btnClose closeContactsBtn"></button>
+            </aside>
+            <!--Mobile CONTACTS end-->
+        </nav>
+    </div>
+    <!--Header END-->
+
+    <!--Main Slider START-->
+    <div class="swiper-container mainSlider firstSection__mainSlider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide mainSlider__slide">
+                <img src="../img/first-screen/modern-breakfast-bar.jpg" alt="photo" class="mainSlider__slideImg">
+                <div class="mainSlider__slideWrapper">
+                    <div class="mainSlider__slideContent">
+                        <div class="numberCount mainSlider__slideNumberCount">
+                            <div class="numberCount__count">08/</div>
+                            <div class="numberCount__number">01</div>
+                        </div>
+                        <div class="mainSlider__slideOffer">
+                            <h1 class="mainSlider__slideTitle">
+                                Проектирование, дизайн и производство мебели
+                            </h1>
+                            <h3 class="mainSlider__slideSubtitle">
+                                Создаем стильную, надежную, функциональную мебель за 6 недель с гарантией и
+                                постгарантийным обслуживанием
+                            </h3>
+                            <div class="mainSlider__slideLinkBlock">
+                                <a href="/" class="actionButton">Смотреть салон</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide mainSlider__slide">
+                <img src="../img/first-screen/modern-breakfast-bar.jpg" alt="photo" class="mainSlider__slideImg">
+                <div class="mainSlider__slideWrapper">
+                    <div class="mainSlider__slideContent">
+                        <div class="numberCount mainSlider__slideNumberCount">
+                            <div class="numberCount__count">08/</div>
+                            <div class="numberCount__number">02</div>
+                        </div>
+                        <div class="mainSlider__slideOffer">
+                            <h1 class="mainSlider__slideTitle">
+                                Проектирование, дизайн и производство мебели
+                            </h1>
+                            <h3 class="mainSlider__slideSubtitle">
+                                Создаем стильную, надежную, функциональную мебель за 6 недель с гарантией и
+                                постгарантийным обслуживанием
+                            </h3>
+                            <div class="mainSlider__slideLinkBlock">
+                                <a href="/" class="actionButton">Смотреть салон</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide mainSlider__slide">
+                <img src="../img/first-screen/modern-breakfast-bar.jpg" alt="photo" class="mainSlider__slideImg">
+                <div class="mainSlider__slideWrapper">
+                    <div class="mainSlider__slideContent">
+                        <div class="numberCount mainSlider__slideNumberCount">
+                            <div class="numberCount__count">08/</div>
+                            <div class="numberCount__number">03</div>
+                        </div>
+                        <div class="mainSlider__slideOffer">
+                            <h1 class="mainSlider__slideTitle">
+                                Проектирование, дизайн и производство мебели
+                            </h1>
+                            <h3 class="mainSlider__slideSubtitle">
+                                Создаем стильную, надежную, функциональную мебель за 6 недель с гарантией и
+                                постгарантийным обслуживанием
+                            </h3>
+                            <div class="mainSlider__slideLinkBlock">
+                                <a href="/" class="actionButton">Смотреть салон</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide mainSlider__slide">
+                <img src="../img/first-screen/modern-breakfast-bar.jpg" alt="photo" class="mainSlider__slideImg">
+                <div class="mainSlider__slideWrapper">
+                    <div class="mainSlider__slideContent">
+                        <div class="numberCount mainSlider__slideNumberCount">
+                            <div class="numberCount__count">08/</div>
+                            <div class="numberCount__number">04</div>
+                        </div>
+                        <div class="mainSlider__slideOffer">
+                            <h1 class="mainSlider__slideTitle">
+                                Проектирование, дизайн и производство мебели
+                            </h1>
+                            <h3 class="mainSlider__slideSubtitle">
+                                Создаем стильную, надежную, функциональную мебель за 6 недель с гарантией и
+                                постгарантийным обслуживанием
+                            </h3>
+                            <div class="mainSlider__slideLinkBlock">
+                                <a href="/" class="actionButton">Смотреть салон</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide mainSlider__slide">
+                <img src="../img/first-screen/modern-breakfast-bar.jpg" alt="photo" class="mainSlider__slideImg">
+                <div class="mainSlider__slideWrapper">
+                    <div class="mainSlider__slideContent">
+                        <div class="numberCount mainSlider__slideNumberCount">
+                            <div class="numberCount__count">08/</div>
+                            <div class="numberCount__number">05</div>
+                        </div>
+                        <div class="mainSlider__slideOffer">
+                            <h1 class="mainSlider__slideTitle">
+                                Проектирование, дизайн и производство мебели
+                            </h1>
+                            <h3 class="mainSlider__slideSubtitle">
+                                Создаем стильную, надежную, функциональную мебель за 6 недель с гарантией и
+                                постгарантийным обслуживанием
+                            </h3>
+                            <div class="mainSlider__slideLinkBlock">
+                                <a href="/" class="actionButton">Смотреть салон</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide mainSlider__slide">
+                <img src="../img/first-screen/modern-breakfast-bar.jpg" alt="photo" class="mainSlider__slideImg">
+                <div class="mainSlider__slideWrapper">
+                    <div class="mainSlider__slideContent">
+                        <div class="numberCount mainSlider__slideNumberCount">
+                            <div class="numberCount__count">08/</div>
+                            <div class="numberCount__number">06</div>
+                        </div>
+                        <div class="mainSlider__slideOffer">
+                            <h1 class="mainSlider__slideTitle">
+                                Проектирование, дизайн и производство мебели
+                            </h1>
+                            <h3 class="mainSlider__slideSubtitle">
+                                Создаем стильную, надежную, функциональную мебель за 6 недель с гарантией и
+                                постгарантийным обслуживанием
+                            </h3>
+                            <div class="mainSlider__slideLinkBlock">
+                                <a href="/" class="actionButton">Смотреть салон</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide mainSlider__slide">
+                <img src="../img/first-screen/modern-breakfast-bar.jpg" alt="photo" class="mainSlider__slideImg">
+                <div class="mainSlider__slideWrapper">
+                    <div class="mainSlider__slideContent">
+                        <div class="numberCount mainSlider__slideNumberCount">
+                            <div class="numberCount__count">08/</div>
+                            <div class="numberCount__number">07</div>
+                        </div>
+                        <div class="mainSlider__slideOffer">
+                            <h1 class="mainSlider__slideTitle">
+                                Проектирование, дизайн и производство мебели
+                            </h1>
+                            <h3 class="mainSlider__slideSubtitle">
+                                Создаем стильную, надежную, функциональную мебель за 6 недель с гарантией и
+                                постгарантийным обслуживанием
+                            </h3>
+                            <div class="mainSlider__slideLinkBlock">
+                                <a href="/" class="actionButton">Смотреть салон</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide mainSlider__slide">
+                <img src="../img/first-screen/modern-breakfast-bar.jpg" alt="photo" class="mainSlider__slideImg">
+                <div class="mainSlider__slideWrapper">
+                    <div class="mainSlider__slideContent">
+                        <div class="numberCount mainSlider__slideNumberCount">
+                            <div class="numberCount__count">08/</div>
+                            <div class="numberCount__number">08</div>
+                        </div>
+                        <div class="mainSlider__slideOffer">
+                            <h1 class="mainSlider__slideTitle">
+                                Проектирование, дизайн и производство мебели
+                            </h1>
+                            <h3 class="mainSlider__slideSubtitle">
+                                Создаем стильную, надежную, функциональную мебель за 6 недель с гарантией и
+                                постгарантийным обслуживанием
+                            </h3>
+                            <div class="mainSlider__slideLinkBlock">
+                                <a href="/" class="actionButton">Смотреть салон</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="three"></div>
+    <!--Main Slider END-->
+
+    <!--Slider preview START-->
+    <div class="previewMainSlider firstSection__sliderPreview">
+        <div class="previewMainSlider__wrapper">
+            <div thumbsSlider="" class="swiper-container previewMainSlider__slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide previewMainSlider__slide">
+                        <p class="previewMainSlider__number">01</p>
+                        <p class="previewMainSlider__description">Стильная кухня, черно/белая и деревянная основа
+                        </p>
+                    </div>
+                    <div class="swiper-slide previewMainSlider__slide">
+                        <p class="previewMainSlider__number">02</p>
+                        <p class="previewMainSlider__description">Стильная кухня, черно/белая и деревянная основа
+                        </p>
+                    </div>
+                    <div class="swiper-slide previewMainSlider__slide">
+                        <p class="previewMainSlider__number">03</p>
+                        <p class="previewMainSlider__description">Стильная кухня, черно/белая и деревянная основа
+                        </p>
+                    </div>
+                    <div class="swiper-slide previewMainSlider__slide">
+                        <p class="previewMainSlider__number">04</p>
+                        <p class="previewMainSlider__description">Стильная кухня, черно/белая и деревянная основа
+                        </p>
+                    </div>
+                    <div class="swiper-slide previewMainSlider__slide">
+                        <p class="previewMainSlider__number">05</p>
+                        <p class="previewMainSlider__description">Стильная кухня, черно/белая и деревянная основа
+                        </p>
+                    </div>
+                    <div class="swiper-slide previewMainSlider__slide">
+                        <p class="previewMainSlider__number">06</p>
+                        <p class="previewMainSlider__description">Стильная кухня, черно/белая и деревянная основа
+                        </p>
+                    </div>
+                    <div class="swiper-slide previewMainSlider__slide">
+                        <p class="previewMainSlider__number">07</p>
+                        <p class="previewMainSlider__description">Стильная кухня, черно/белая и деревянная основа
+                        </p>
+                    </div>
+                    <div class="swiper-slide previewMainSlider__slide">
+                        <p class="previewMainSlider__number">08</p>
+                        <p class="previewMainSlider__description">Стильная кухня, черно/белая и деревянная основа
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Slider preview END-->
+
+    <!--Arrows preview slider START-->
+    <div class="arrows firstSection__arrows">
+        <div class="arrows__wrapper">
+            <div class="arrows__buttons">
+                <button class="arrows__left">
+                </button>
+                <button class="arrows__right">
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--Arrows preview slider FINISH-->
+
 </section>
+<!--First section END-->
